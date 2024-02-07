@@ -98,7 +98,7 @@ const Signup = () => {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/user/register",
+        "http://127.0.0.1:5000/signup",
         formData
       );
       console.log(response);
@@ -260,7 +260,6 @@ const Signup = () => {
             label="Flat/Building No, Area, Street , Sector"
             onChange={handleChange}
             className="w-full rounded"
-            required
           />
           <div className="flex w-full justify-between md:flex-col md:gap-5">
             <div className="flex flex-col custom-width-45 md:w-full">
@@ -272,7 +271,6 @@ const Signup = () => {
                 label="Town/city"
                 onChange={handleChange}
                 className="w-full rounded"
-                required
               />
             </div>
             <div className="flex flex-col custom-width-45 md:w-full">
@@ -282,7 +280,6 @@ const Signup = () => {
                 label="Pincode"
                 value={formData.pincode}
                 onChange={handleChange}
-                required
                 name="pincode"
               />
             </div>

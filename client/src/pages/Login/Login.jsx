@@ -63,7 +63,7 @@ const Login = () => {
       setLoading(true);
       console.log(formData);
       const response = await axios.post(
-        "http://localhost:5000/user/login",
+        "http://127.0.0.1:5000/login",
         formData
       );
       console.log(response.data);
